@@ -17,12 +17,12 @@ class UserManager<T extends User> {
   }
 
   void printMails() {
-    users.forEach((T user) {
+    for (var user in users) {
       if (user is AdminUser) {
         print(user.getMailSystem());
       } else {
         print(user.email);
       }
-    });
+    }
   }
 }

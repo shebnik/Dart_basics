@@ -11,18 +11,18 @@ class Task3 {
     List<num> numbers = findNumbers(line);
 
     print("Числа найденные в строке:");
-    numbers.forEach((element) {
+    for (var element in numbers) {
       print(element);
-    });
+    }
   }
 
   List<num> findNumbers(String line) {
     List<String> lines = line.split(" ");
     List<num> result = [];
-    lines.forEach((element) {
+    for (var element in lines) {
       num? n = num.tryParse(element);
       if (n != null) result.add(n);
-    });
+    }
     return result;
   }
 }

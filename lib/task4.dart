@@ -22,13 +22,13 @@ class Task4 {
 
   Map<String, int> toMap(List<String> words) {
     Map<String, int> result = {};
-    words.forEach((word) {
+    for (var word in words) {
       if (result.containsKey(word)) {
         result[word] = result[word]! + 1;
       } else {
         result[word] = 1;
       }
-    });
+    }
     return result;
   }
 }

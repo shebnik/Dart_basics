@@ -40,12 +40,12 @@ class Task5 {
 
     Set<int> result = {};
 
-    stringCollection.forEach((element) {
+    for (var element in stringCollection) {
       int? n = mapNumbers[element];
       if (n != null) {
         result.add(n);
       }
-    });
+    }
 
     return result;
   }
